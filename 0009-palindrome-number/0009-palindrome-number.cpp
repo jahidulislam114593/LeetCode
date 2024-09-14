@@ -8,7 +8,7 @@ public:
         {
             int ld = n % 10;
             n/=10;
-
+            
             rev = (rev*10) + ld;
         }
         if(dup == rev) return 1;
