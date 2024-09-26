@@ -14,6 +14,8 @@ public:
         // for(int i = 0; i<n; i++) ans *= x;
 
     //Binary Exponentiation TC-> O(logn)
+        if(n == 0) return 1;
+        if(n == 1) return x;
         long binaryForm = n;
         if(n<0)
         {
