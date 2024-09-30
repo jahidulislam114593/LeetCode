@@ -32,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0125-valid-palindrome](https://github.com/jahidulislam114593/LeetCode/tree/master/0125-valid-palindrome) |
+| [0242-valid-anagram](https://github.com/jahidulislam114593/LeetCode/tree/master/0242-valid-anagram) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -56,10 +57,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/jahidulislam114593/LeetCode/tree/master/0169-majority-element) |
+| [0242-valid-anagram](https://github.com/jahidulislam114593/LeetCode/tree/master/0242-valid-anagram) |
 ## Sorting
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/jahidulislam114593/LeetCode/tree/master/0169-majority-element) |
+| [0242-valid-anagram](https://github.com/jahidulislam114593/LeetCode/tree/master/0242-valid-anagram) |
 ## Counting
 |  |
 | ------- |
