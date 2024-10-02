@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0011-container-with-most-water](https://github.com/jahidulislam114593/LeetCode/tree/master/0011-container-with-most-water) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0035-search-insert-position](https://github.com/jahidulislam114593/LeetCode/tree/master/0035-search-insert-position) |
 | [0053-maximum-subarray](https://github.com/jahidulislam114593/LeetCode/tree/master/0053-maximum-subarray) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jahidulislam114593/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0136-single-number](https://github.com/jahidulislam114593/LeetCode/tree/master/0136-single-number) |
@@ -79,5 +80,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [0035-search-insert-position](https://github.com/jahidulislam114593/LeetCode/tree/master/0035-search-insert-position) |
 | [0792-binary-search](https://github.com/jahidulislam114593/LeetCode/tree/master/0792-binary-search) |
 <!---LeetCode Topics End-->
