@@ -1,41 +1,41 @@
 class Solution {
 public:
-    int singleNonDuplicate(vector<int>& nums) {   
-        int n = nums.size();
-        if(n == 1) return nums[0];
+    int singleNonDuplicate(vector<int>& A) {
+        int n = A.size();
+        if(n==1) return A[0];
+        if(A[0] != A[1]) return A[0];
+        if(A[n-1] != A[n-2]) return A[n-1];
 
-        int st = 0, end = n - 1;
+        int st = 1, end = n-2;
         while(st <= end)
         {
             int mid = st + (end - st) / 2;
+            if(A[mid-1] != A[mid] && A[mid] != A[mid+1]) return A[mid];
 
-            if(mid == 0 && nums[0] != nums[1]) return nums[mid];
-            if(mid == n-1 && nums[n-1] != nums[n-2]) return nums[mid];
-
-            if(nums[mid-1] != nums[mid] && nums[mid] != nums[mid + 1]) return nums[mid];
-            
             if(mid % 2 == 0)
-            {//even
-                if(nums[mid - 1] == nums[mid])
-                { // left
+            {
+                //even
+                if(A[mid-1] == A[mid])
+                {
+                    //left 
                     end = mid - 1;
-                }else 
-                {//right
+                }else
+                {
                     st = mid + 1;
                 }
             }else
-            { //odd
-                if(nums[mid - 1] == nums[mid])
-                {//right
+            {
+                //odd
+                if(A[mid-1] == A[mid])
+                {
+                    //right
                     st = mid + 1;
                 }else
-                {//left
+                {
                     end = mid - 1;
                 }
             }
         }
         return -1;
-
     }
-
 };
