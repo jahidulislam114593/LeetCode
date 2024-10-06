@@ -3,13 +3,22 @@ public:
     int peakIndexInMountainArray(vector<int>& arr) {
         int n = arr.size();
 
-        for(int i = 1;i<n-1; i++)
+        int st = 1, end  = n - 2;
+
+        while(st <= end)
         {
-            if(arr[i-1] < arr[i] && arr[i] > arr[i+1])
+            int mid = st + (end - st) / 2;
+            if(arr[mid - 1] < arr[mid] && arr[mid] > arr[mid + 1]) return mid;
+
+            if(arr[mid - 1] < arr[mid]){
+                //left -> search on right side
+                st = mid + 1;
+            }else
             {
-                return i;
+                //right -> search on left side
+                end = mid - 1;
             }
         }
-        return -1;;
+        return -1;
     }
 };
