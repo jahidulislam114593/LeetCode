@@ -1,29 +1,32 @@
 class Solution {
 public:
-    bool isValid(vector<int>& arr, int n, int k, int mid) {
-        int split = 1, subArr = 0;
-        for(int i = 0; i < n; i++) {
-            if(arr[i] > mid) return false;  
-            if(subArr + arr[i] <= mid) {
-                subArr += arr[i];
-            } else {
-                split++;
-                subArr = arr[i];  
+    bool isPossible(vector<int>&nums, int n, int m, int mid)
+    {
+        int painter = 1, time = 0;
+        for(int i = 0; i<n; i++)
+        {
+            if(time + nums[i] <= mid)
+            {
+                time += nums[i];
+            }else
+            {
+                painter++;
+                time = nums[i];
             }
         }
-        return split <= k;  
+        return painter > m ? false : true;
     }
 
-    int splitArray(vector<int>& arr, int k) {
-        int n = arr.size();
+    int splitArray(vector<int>& nums, int k) {
+        int n = nums.size();
         int sum = 0;
-        for(int i = 0; i < n; i++) sum += arr[i];
+        for(int i = 0; i < n; i++) sum += nums[i];
 
-        int st = *max_element(arr.begin(), arr.end()), end = sum, ans = -1;
+        int st = *max_element(nums.begin(), nums.end()), end = sum, ans = -1;
 
         while(st <= end) {
             int mid = st + (end - st) / 2;
-            if(isValid(arr, n, k, mid)) {
+            if(isPossible(nums, n, k, mid)) {
                 ans = mid;
                 end = mid - 1; 
             } else {
