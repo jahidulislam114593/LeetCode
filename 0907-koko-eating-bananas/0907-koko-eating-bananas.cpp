@@ -13,12 +13,12 @@ public:
 
     int minEatingSpeed(vector<int>& piles, int h) {
         int n = piles.size();
-        long long st = 1;
-        long long end = *max_element(piles.begin(), piles.end());
+        int st = 1;
+        int end = *max_element(piles.begin(), piles.end());
         int ans = 0;
         while(st <= end)
         {
-            long long mid = st + (end - st )/ 2;
+            int mid = st + (end - st )/ 2;
             if(isPossible(piles, n, h, mid))
             {
                 ans = mid;
