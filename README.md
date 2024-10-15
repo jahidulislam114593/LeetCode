@@ -27,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0882-peak-index-in-a-mountain-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0907-koko-eating-bananas](https://github.com/jahidulislam114593/LeetCode/tree/master/0907-koko-eating-bananas) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/jahidulislam114593/LeetCode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
+| [1646-kth-missing-positive-number](https://github.com/jahidulislam114593/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [3236-smallest-missing-integer-greater-than-sequential-prefix-sum](https://github.com/jahidulislam114593/LeetCode/tree/master/3236-smallest-missing-integer-greater-than-sequential-prefix-sum) |
 ## Bit Manipulation
 |  |
@@ -102,4 +103,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0882-peak-index-in-a-mountain-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0907-koko-eating-bananas](https://github.com/jahidulislam114593/LeetCode/tree/master/0907-koko-eating-bananas) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/jahidulislam114593/LeetCode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
+| [1646-kth-missing-positive-number](https://github.com/jahidulislam114593/LeetCode/tree/master/1646-kth-missing-positive-number) |
 <!---LeetCode Topics End-->
