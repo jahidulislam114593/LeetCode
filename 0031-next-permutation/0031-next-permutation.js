@@ -1,42 +1,52 @@
 /**
- * @param {number[]} A
+ * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var nextPermutation = function(A) {
     let n = A.length;
     let pivot = -1;
-
-    // Step 1: Find the pivot element
-    for (let i = n - 2; i >= 0; --i) {
-        if (A[i] < A[i + 1]) {
+    for(let i = n - 2; i >= 0; --i)
+    {
+        if(A[i] < A[i+1])
+        {
             pivot = i;
             break;
         }
     }
 
-    // Step 2: If no pivot is found, reverse the entire array
-    if (pivot === -1) {
-        reverse(A, 0, n - 1);
+    if(pivot === -1)
+    {
+        let i = 0, j = n - 1;
+        while(j > i)
+        {
+            let tmp = A[j];
+            A[j] = A[i];
+            A[i] = tmp;
+            i++;
+            j--; 
+        }
         return;
     }
 
-    // Step 3: Find the next larger element to swap with the pivot
-    for (let i = n - 1; i > pivot; --i) {
-        if (A[i] > A[pivot]) {
-            [A[pivot], A[i]] = [A[i], A[pivot]];  // Swap using destructuring
+    for(let i = n - 1; i > pivot; --i)
+    {
+        if(A[i] > A[pivot])
+        {
+            let tmp = A[pivot];
+            A[pivot] = A[i];
+            A[i] = tmp;
             break;
         }
     }
 
-    // Step 4: Reverse the elements to the right of the pivot
-    reverse(A, pivot + 1, n - 1);
-};
-
-// Helper function to reverse elements in the array
-function reverse(arr, start, end) {
-    while (start < end) {
-        [arr[start], arr[end]] = [arr[end], arr[start]];  // Swap using destructuring
-        start++;
-        end--;
+    let i = pivot + 1;
+    let j = n - 1;
+    while(j>i)
+    {
+        let tmp = A[j];
+        A[j] = A[i];
+        A[i] = tmp;
+        i++;
+        j--; 
     }
-}
+};
