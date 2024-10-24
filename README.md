@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0035-search-insert-position](https://github.com/jahidulislam114593/LeetCode/tree/master/0035-search-insert-position) |
 | [0053-maximum-subarray](https://github.com/jahidulislam114593/LeetCode/tree/master/0053-maximum-subarray) |
 | [0075-sort-colors](https://github.com/jahidulislam114593/LeetCode/tree/master/0075-sort-colors) |
+| [0088-merge-sorted-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jahidulislam114593/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0136-single-number](https://github.com/jahidulislam114593/LeetCode/tree/master/0136-single-number) |
 | [0169-majority-element](https://github.com/jahidulislam114593/LeetCode/tree/master/0169-majority-element) |
@@ -42,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/jahidulislam114593/LeetCode/tree/master/0027-remove-element) |
 | [0075-sort-colors](https://github.com/jahidulislam114593/LeetCode/tree/master/0075-sort-colors) |
+| [0088-merge-sorted-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0125-valid-palindrome](https://github.com/jahidulislam114593/LeetCode/tree/master/0125-valid-palindrome) |
 ## String
 |  |
@@ -80,6 +82,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/jahidulislam114593/LeetCode/tree/master/0075-sort-colors) |
+| [0088-merge-sorted-array](https://github.com/jahidulislam114593/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0169-majority-element](https://github.com/jahidulislam114593/LeetCode/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/jahidulislam114593/LeetCode/tree/master/0242-valid-anagram) |
 | [3236-smallest-missing-integer-greater-than-sequential-prefix-sum](https://github.com/jahidulislam114593/LeetCode/tree/master/3236-smallest-missing-integer-greater-than-sequential-prefix-sum) |
