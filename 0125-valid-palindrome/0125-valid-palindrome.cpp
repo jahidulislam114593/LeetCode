@@ -1,22 +1,34 @@
 class Solution {
 public:
-    bool palindromeString(int i, string &s)
+    bool isAlphaNumeric(char ch)
     {
-        int n = s.size();
-        if(i >= n/2) return true;
-        if(s[i] != s[n-i-1]) return false;
-        return palindromeString(i+1, s);
-    }
-
-    bool isPalindrome(string s) {
-        string filterString = "";
-        for(char c: s)
+        if((ch >= '0' && ch <= '9') || (tolower(ch) >= 'a' && tolower(ch) <= 'z'))
         {
-            if(isalnum(c))
-            {
-                filterString += tolower(c);
-            }
+            return true;
         }
-        return palindromeString(0,filterString);
+        return false;
+    }
+    bool isPalindrome(string s) {
+        int st = 0, end = s.size() - 1;
+        while(st < end)
+        {
+            if(!isAlphaNumeric(s[st]))
+            {
+                st++;
+                continue;
+            }
+            if(!isAlphaNumeric(s[end]))
+            {
+                end--;
+                continue;
+            }
+            if(tolower(s[st]) != tolower(s[end]))
+            {
+                return false;
+            }
+            st++;
+            end--;
+        }
+        return true;
     }
 };
