@@ -1,36 +1,32 @@
 class Solution {
 public:
-    bool Freq(int freq1[26], int freq2[26])
+    bool isFreqSame(int freq1[26], int freq2[26])
     {
-        for(int i = 0; i<26; i++)
+        for(int i = 0; i<25; ++i)
         {
             if(freq1[i] != freq2[i]) return false;
         }
         return true;
     }
     bool checkInclusion(string s1, string s2) {
-        int freq[26] = {0};
-        for(int i = 0; i < s1.length(); i++)
+        int freq[26] = { 0 };
+        for(int i = 0; i<s1.length(); ++i)
         {
-            int idx = s1[i] - 'a';
-            freq[idx]++;
+            freq[s1[i] - 'a']++;
         }
 
-        int windoSize = s1.length();
-        for(int i = 0; i<s2.length(); i++)
+        int windSize = s1.length();
+        for(int i = 0; i<s2.length(); ++i)
         {
-            int windoFreq[26] = {0};
-            int windoIdx = 0, idx = i;
-            while(windoIdx < windoSize && idx < s2.length())
+            int windIdx = 0, idx = i;
+            int windFreq[26] = { 0 };
+            while(windIdx < windSize && idx < s2.length())
             {
-                windoFreq[s2[idx] - 'a']++;
-                windoIdx++;
+                windFreq[s2[idx] - 'a']++;
+                windIdx++; 
                 idx++;
             }
-            if(Freq(freq, windoFreq))
-            {
-                return true;
-            }
+            if(isFreqSame(freq,windFreq)) return true;
         }
         return false;
     }
