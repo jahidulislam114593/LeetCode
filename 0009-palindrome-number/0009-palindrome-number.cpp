@@ -1,17 +1,24 @@
 class Solution {
 public:
-    bool isPalindrome(int n) {
-        if(n < 0) return 0;
-        int dup = n;
-        long long rev = 0;
+    int rev(int n)
+    {
+        int revNum = 0;
         while(n != 0)
         {
-            int ld = n % 10;
-            n/=10;
-            
-            rev = (rev*10) + ld;
+            int dig = n % 10;
+            if(revNum > INT_MAX / 10 || revNum < INT_MIN / 10)
+            {
+                return 0;
+            }
+            revNum = revNum * 10 + dig;
+            n /= 10;
         }
-        if(dup == rev) return 1;
-        else return 0;
+        return revNum;
+    }
+    bool isPalindrome(int x) {
+        if(x < 0 ) return false;
+        int revx = rev(x);
+        return revx == x;
+        
     }
 };
