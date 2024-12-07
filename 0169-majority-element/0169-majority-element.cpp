@@ -1,15 +1,18 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        //Moor's voting algorithm
         int n = nums.size();
-        int freq = 0, ans = 0;
-        for(int i = 0;i <n; i++)
+
+        for(int i = 0; i<n; ++i)
         {
-            if(freq == 0) ans = nums[i];
-            if(ans == nums[i]) freq++;
-            else freq--;
+            int cnt = 0;
+            for(int j = 0; j<n; ++j)
+            {
+                if(nums[i] == nums[j]) cnt++;
+            }
+            if(cnt > n/2) return nums[i];
         }
-        return ans;
+        return -1;
     }
+
 };
