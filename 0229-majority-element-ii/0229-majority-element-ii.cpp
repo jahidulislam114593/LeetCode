@@ -15,7 +15,6 @@ public:
                 if(cnt > n/3) ls.push_back(nums[i]);
             }
             if(ls.size() == 2) return ls;
-            
         }
         return ls;
     }
