@@ -1,40 +1,36 @@
 class Solution {
 public:
-    void nextPermutation(vector<int>& A) {
-        int n = A.size();
-        int pivot = -1;
-        //1st step: Find Pivot element
-        for(int i = n - 2; i >= 0; --i)
+    void nextPermutation(vector<int>& nums) {
+        int idx = -1;
+        int n = nums.size();
+
+        // 1. longest prefix / Peak 2 1(downfall) 5 4 3 0 0
+        for(int i = n - 2; i >= 0; i--)
         {
-            if(A[i] < A[i+1])
+            if(nums[i] < nums[i+1])
             {
-                pivot = i;
+                idx = i;
                 break;
             }
         }
-        if(pivot == -1)
+        if(idx == -1)
         {
-            reverse(A.begin(), A.end());
+            reverse(nums.begin(), nums.end());
             return;
         }
 
-        //2nd step: next larget ele
-        for(int i = n - 1; i > pivot; --i)
+        // 2. find the closest value to nums[idx]
+        for(int i = n - 1; i > idx; i--)
         {
-            if(A[i] > A[pivot])
+            if(nums[i] > nums[idx])
             {
-                swap(A[i], A[pivot]);
+                swap(nums[i], nums[idx]);
                 break;
             }
         }
 
-        //3rd step : Reverse
+        //3. sort the remaining value
 
-        int i = pivot + 1;
-        int j = n - 1;
-        while(j>=i)
-        {
-            swap(A[i++], A[j--]);
-        }
+        reverse(nums.begin() + idx + 1, nums.end());
     }
 };
