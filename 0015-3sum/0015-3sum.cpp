@@ -6,6 +6,7 @@ public:
         sort(nums.begin(), nums.end());
         for(int i = 0; i<n; ++i)
         {
+            if(i > 0 && nums[i] == nums[i-1]) continue;
             int j = i + 1;
             int k = n - 1;
             while(k > j)
@@ -18,8 +19,8 @@ public:
                     // sort(temp.begin(), temp.end());
                     ans.push_back(temp);
                     j++, k--;
-                    while(k > j && nums[j] == nums[j-1]) j--;
-                    while(k > j && nums[k] == nums[k+1]) k++;
+                    while(k > j && nums[j] == nums[j-1]) j++;
+                    while(k > j && nums[k] == nums[k+1]) k--;
                 }
             }
         }
