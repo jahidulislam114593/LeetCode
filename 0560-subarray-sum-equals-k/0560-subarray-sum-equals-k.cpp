@@ -2,16 +2,15 @@ class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
         int n = nums.size();
-        unordered_map<int,int> mp;
-        mp[0] = 1;
-        int prefix = 0, cnt = 0;
-        
+        unordered_map<int, int> mp;
+        mp[0] = 1; // important to store 0,1 
+        int prefixSum = 0, cnt = 0;
         for(int i = 0; i<n; ++i)
         {
-            prefix += nums[i];
-            int remove = prefix - k;
-            cnt += mp[remove];
-            mp[prefix]++; 
+            prefixSum += nums[i];
+            int rem = prefixSum - k;
+            cnt += mp[rem];
+            mp[prefixSum]++;
         }
 
         return cnt;
