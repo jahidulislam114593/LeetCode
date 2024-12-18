@@ -6,6 +6,7 @@ public:
         vector<int>ans;
 
         int a, b;
+
         int expSum = 0, actSum = 0;
         for(int i = 0; i<n; ++i)
         {
@@ -23,9 +24,8 @@ public:
 
         expSum = (n*n) * (n*n + 1) / 2;
         b = expSum + a - actSum;
-
         ans.push_back(b);
-
+        
         return ans;
     }
 };
