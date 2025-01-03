@@ -10,7 +10,6 @@ public:
         {
             prefix += nums[i];
             int rem = prefix - k;
-            
             cnt += m[rem];
             m[prefix]++;
         }
